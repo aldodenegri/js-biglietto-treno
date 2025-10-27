@@ -1,5 +1,18 @@
-let km = parseFloat(prompt("Inserisci chilometri:"));
-let eta = parseInt(prompt("Inserisci la tua età:"));
+let km;
+let eta;
+do {
+    km = parseFloat(prompt("Inserisci chilometri:"));
+    if (isNaN(km) || km <= 0)
+        alert("Per favore, inserisci un numero valido di chilometri.");
+} while (isNaN(km) || km <= 0);
+do {
+    eta = parseInt(prompt("Inserisci la tua età:"));
+    if (isNaN(eta) || eta <= 0)
+        alert("Per favore, inserisci un'età valida.");
+} while (isNaN(eta) || eta <= 0);
+
+
+
 const prezzoKm = 0.21;
 let prezzoTotale = prezzoKm * km;
 let prezzoScontato = prezzoTotale;
